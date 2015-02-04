@@ -1,0 +1,33 @@
+Given elixir (keyword list):
+  def project do
+    [ name: "mix",
+      version: "0.1.0",
+      deps: deps ]
+  end
+
+Do (indenting):
+  vip=
+
+Expect:
+  def project do
+    [ name: "mix",
+      version: "0.1.0",
+      deps: deps ]
+  end
+
+Given elixir (keyword list):
+
+
+Do (typing):
+  idef project do\<Enter>
+  [ name: "mix",\<Enter>
+  version: "0.1.0",\<Enter>
+  deps: deps ]\<Enter>
+  end\<Esc>
+
+Expect:
+  def project do
+    [ name: "mix",
+      version: "0.1.0",
+      deps: deps ]
+  end

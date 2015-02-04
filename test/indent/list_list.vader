@@ -1,0 +1,29 @@
+Given elixir (keyword list):
+  def test do
+    [ [:a, :b, :c],
+      [:d, :e, :f] ]
+  end
+
+Do (indenting):
+  vip=
+
+Expect:
+  def test do
+    [ [:a, :b, :c],
+      [:d, :e, :f] ]
+  end
+
+Given elixir (keyword list):
+
+
+Do (typing):
+  idef test do\<Enter>
+  [ [:a, :b, :c],\<Enter>
+  [:d, :e, :f] ]\<Enter>
+  end\<Esc>
+
+Expect:
+  def test do
+    [ [:a, :b, :c],
+      [:d, :e, :f] ]
+  end

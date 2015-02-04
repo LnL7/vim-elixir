@@ -1,0 +1,49 @@
+Given elixir (multiline list):
+  def test do
+    [ app: :first,
+      version: "0.0.1",
+      dynamos: [First.Dynamo],
+      compilers: [:elixir, :dynamo, :ecto, :app],
+      env: [prod: [compile_path: "ebin"]],
+      compile_path: "tmp/first/ebin",
+      deps: deps ]
+  end
+
+Do (indenting):
+  vip=
+
+Expect:
+  def test do
+    [ app: :first,
+      version: "0.0.1",
+      dynamos: [First.Dynamo],
+      compilers: [:elixir, :dynamo, :ecto, :app],
+      env: [prod: [compile_path: "ebin"]],
+      compile_path: "tmp/first/ebin",
+      deps: deps ]
+  end
+
+Given elixir (multiline list):
+
+
+Do (typing):
+  idef test do\<Enter>
+  [ app: :first,\<Enter>
+  version: "0.0.1",\<Enter>
+  dynamos: [First.Dynamo],\<Enter>
+  compilers: [:elixir, :dynamo, :ecto, :app],\<Enter>
+  env: [prod: [compile_path: "ebin"]],\<Enter>
+  compile_path: "tmp/first/ebin",\<Enter>
+  deps: deps ]\<Enter>
+  end\<Esc>
+
+Expect:
+  def test do
+    [ app: :first,
+      version: "0.0.1",
+      dynamos: [First.Dynamo],
+      compilers: [:elixir, :dynamo, :ecto, :app],
+      env: [prod: [compile_path: "ebin"]],
+      compile_path: "tmp/first/ebin",
+      deps: deps ]
+  end

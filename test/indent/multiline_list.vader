@@ -1,0 +1,56 @@
+Given elixir (multiline list):
+  def example do
+    [ :foo,
+      :bar,
+      :baz ]
+  end
+
+Do (indenting):
+  vip=
+
+Expect:
+  def example do
+    [ :foo,
+      :bar,
+      :baz ]
+  end
+
+Given elixir (multiline list with newlines):
+  def example do
+    [
+      :foo,
+      :bar,
+
+      :baz
+    ]
+  end
+
+Do (indenting):
+  vip=
+
+Expect:
+  def example do
+    [
+      :foo,
+      :bar,
+
+      :baz
+    ]
+  end
+
+Given elixir (multiline list):
+
+
+Do (typing):
+  idef example do\<Enter>
+  [ :foo,\<Enter>
+  :bar,\<Enter>
+  :baz ]\<Enter>
+  end\<Esc>
+
+Expect:
+  def example do
+    [ :foo,
+      :bar,
+      :baz ]
+  end

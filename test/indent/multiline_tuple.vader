@@ -1,0 +1,56 @@
+Given elixir (multiline tuple):
+  def test do
+    { :a,
+      :b,
+      :c }
+  end
+
+Do (indenting):
+  vip=
+
+Expect:
+  def test do
+    { :a,
+      :b,
+      :c }
+  end
+
+Given elixir (multiline tuple with newlines):
+  def test do
+    {
+      :a,
+
+      :b,
+      :c
+    }
+  end
+
+Do (indenting):
+  vip=
+
+Expect:
+  def test do
+    {
+      :a,
+
+      :b,
+      :c
+    }
+  end
+
+Given elixir (multiline tuple):
+
+
+Do (typing):
+  idef test do\<Enter>
+  { :a,\<Enter>
+  :b,\<Enter>
+  :c }\<Enter>
+  end\<Esc>
+
+Expect:
+  def test do
+    { :a,
+      :b,
+      :c }
+  end

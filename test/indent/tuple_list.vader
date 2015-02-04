@@ -1,0 +1,37 @@
+Given elixir (keyword list):
+  def test do
+    [ { :cowboy, github: "extend/cowboy" },
+      { :dynamo, "0.1.0-dev", github: "elixir-lang/dynamo" },
+      { :ecto, github: "elixir-lang/ecto" },
+      { :pgsql, github: "semiocast/pgsql" } ]
+  end
+
+Do (indenting):
+  vip=
+
+Expect:
+  def test do
+    [ { :cowboy, github: "extend/cowboy" },
+      { :dynamo, "0.1.0-dev", github: "elixir-lang/dynamo" },
+      { :ecto, github: "elixir-lang/ecto" },
+      { :pgsql, github: "semiocast/pgsql" } ]
+  end
+
+Given elixir (keyword list):
+
+
+Do (typing):
+  idef test do\<Enter>
+  [ { :cowboy, github: "extend/cowboy" },\<Enter>
+  { :dynamo, "0.1.0-dev", github: "elixir-lang/dynamo" },\<Enter>
+  { :ecto, github: "elixir-lang/ecto" },\<Enter>
+  { :pgsql, github: "semiocast/pgsql" } ]\<Enter>
+  end\<Esc>
+
+Expect:
+  def test do
+    [ { :cowboy, github: "extend/cowboy" },
+      { :dynamo, "0.1.0-dev", github: "elixir-lang/dynamo" },
+      { :ecto, github: "elixir-lang/ecto" },
+      { :pgsql, github: "semiocast/pgsql" } ]
+  end
